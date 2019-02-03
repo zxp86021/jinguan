@@ -4,7 +4,9 @@
   "description": "Website For Jinguan Bakery",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "harp compile src dist && babel dist/js -d dist/js",
+    "serve": "harp server src"
   },
   "repository": {
     "type": "git",
