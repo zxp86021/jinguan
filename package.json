@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/zxp86021/jinguan/issues"
   },
-  "homepage": "https://github.com/zxp86021/jinguan#readme"
+  "homepage": "https://github.com/zxp86021/jinguan#readme",
+  "dependencies": {
+    "harp": "^0.29.0"
+  }
 }
