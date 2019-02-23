@@ -1,0 +1,12 @@
+[
+    {
+        "name": "test",
+        "price": "100",
+        "description":"This is a test product"
+    },
+    {
+        "name": "test2",
+        "price": "1000",
+        "description":"This is a next test product"
+    }
+]
