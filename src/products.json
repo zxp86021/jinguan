@@ -2,11 +2,19 @@
     {
         "name": "test",
         "price": "100",
-        "description":"This is a test product"
+        "description":"This is a test product",
+        "type": [
+            "禮盒"
+        ],
+        "image": ""
     },
     {
         "name": "test2",
         "price": "1000",
-        "description":"This is a next test product"
+        "description":"This is a next test product",
+        "type": [
+            "單個"
+        ],
+        "image": ""
     }
 ]
