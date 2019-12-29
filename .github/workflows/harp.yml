@@ -1,4 +1,4 @@
-name: harp build and deploy
+name: harp action
 
 on: 
   push:
@@ -23,7 +23,7 @@ jobs:
       env:
         CI: true
     - name: Create CNAME
-      run: echo ${{ secrets.CNAME_URL }} > ./dist/CNAME
+      run: echo 'www.crown-bakery.tw' > ./dist/CNAME
     - name: test
       run: cat ./dist/CNAME
     #- name: GitHub Pages Deploy
