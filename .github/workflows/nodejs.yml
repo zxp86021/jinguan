@@ -1,4 +1,4 @@
-name: Node CI
+name: harp compile
 
 on: 
   push:
@@ -6,20 +6,16 @@ on:
       - master
 
 jobs:
-  build:
+  build-and-deploy:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [10.x]
-
     steps:
     - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js 10.x
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 10.x
     - name: npm install, build
       run: |
         npm ci
@@ -28,10 +24,9 @@ jobs:
         CI: true
     - name: Create CNAME
       run: echo $CNAME_URL > ./dist/CNAME
-    - name: test
-      run: ls ./dist
-    #- name: GitHub Pages Deploy
-    #  uses: maxheld83/ghpages@v0.2.1
-    #  env:
-    #    BUILD_DIR: 'dist/'
+    - name: GitHub Pages Deploy
+      uses: maxheld83/ghpages@v0.2.1
+      env:
+        BUILD_DIR: './dist/'
+      secrets: $GH_PAT
       
